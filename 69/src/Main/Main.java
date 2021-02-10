@@ -9,22 +9,21 @@ public class Main {
         Scanner in = new Scanner(System.in);
         int friends = 0;
         int a = in.nextInt();
-//        int b = in.nextInt();
+        int b = in.nextInt();
         Vector<Integer> aa = new Vector<>();
-//        Vector<Integer> bb = new Vector<>();
+        Vector<Integer> bb = new Vector<>();
         for (int i = 0; i < a; i++) {
             aa.add(in.nextInt());
         }
-//        for (int i = 0; i < a; i++) {
-//            bb.add(in.nextInt());
-//        }
+        for (int i = 0; i < b; i++) {
+            bb.add(in.nextInt());
+        }
 
-//        while (!compare(aa, bb)) {
-//            change(aa);
-//            friends++;
-//        }
-//        System.out.println(friends);
-        System.out.println(aa.elementAt(0));
+        while (!compare(aa, bb)) {
+            change(aa);
+            friends++;
+        }
+        System.out.println(friends);
 
     }
 
@@ -48,7 +47,7 @@ public class Main {
         while (first != 0 && index < aa.size()) {
             int x = aa.elementAt(index);
             x++;
-            aa.add(index++, x);
+            aa.set(index++, x);
             first--;
         }
         while (first != 0) {
